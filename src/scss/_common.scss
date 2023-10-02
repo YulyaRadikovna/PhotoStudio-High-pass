@@ -1,0 +1,124 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+
+html {
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'TT Firs Neue', 'Roboto', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  list-style-type: none;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+    margin: 0 auto;
+  padding-left: 31px;
+  padding-right: 31px;
+  max-width: 1352px;
+}
+
+.tag {
+  position: absolute;
+  padding: 6px 14px;
+  background-color: #333;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+}
+
+.btn-reset {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 15.5px 22px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #FF6E30;
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid {
+  display: grid;
+  gap: 30px;
+}
+
+@media (max-width: 1049px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 15px;
+  }
+}
+
+
+@media (max-width: 899px) {
+  .container {
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+}
+
+

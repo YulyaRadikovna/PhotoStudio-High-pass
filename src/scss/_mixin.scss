@@ -1,0 +1,148 @@
+@mixin coverCenter {
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin moreLinkInteractive {
+  transition-property: background-color border-color;
+  transition-duration: .3s;
+  transition-timing-function: linear;
+
+  &:hover {
+    background-color: #FF6E30;
+  }
+
+  &:focus-visible:not(:active) {
+    background-color: #BC572B;
+  }
+
+  &:active {
+    background-color: #CE4307;
+    border-color: #CE4307;
+  }
+}
+
+@mixin btnInteractive {
+  transition: background-color .3s linear;
+
+  &:focus-visible {
+    outline: none;
+    border: 1px solid #CE4307;
+  }
+
+  &:hover {
+    background-color: #BC572B;
+  }
+
+  &:active {
+    background-color: #CE4307;
+  }
+}
+
+@mixin formInteractive {
+  &:focus-visible {
+    outline: none;
+    outline: 1px solid #FF6E30;
+  }
+
+  &:hover::-webkit-input-placeholder {
+    transition: color .3s linear;
+    color: #FF6E30;
+  }
+
+  &:active::-webkit-input-placeholder {
+    transition: color .3s linear;
+    color: #CACACA;
+  }
+
+  &:active {
+    outline: 1px solid rgba(240, 102, 102, 1);
+  }
+}
+
+@mixin socialInteractive {
+  &:focus-visible {
+    outline: none;
+
+    svg {
+      path {
+        transition: fill .3s linear;
+        outline: none;
+        fill: #BC572B;
+      }
+    }
+  }
+
+  &:hover {
+    svg {
+      path {
+        transition: fill .2s linear;
+        fill: #FF6E30;
+      }
+    }
+
+    &:active {
+      svg {
+        path {
+          transition: fill .2s linear;
+          fill: #CE4307;
+        }
+      }
+    }
+
+  }
+}
+
+@mixin searchInteractive {
+  transition: fill 0.3s ease-in-out;
+
+  svg {
+    path {
+      stroke: #FFFFFF;
+    }
+
+    rect {
+      fill: #FFFFFF;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    svg {
+      path {
+        stroke: #FF6E30;
+      }
+
+      rect {
+        fill: #FF6E30;
+      }
+    }
+  }
+
+  &:hover {
+    svg {
+      path {
+        stroke: #FF6E30;
+      }
+
+      rect {
+        fill: #FF6E30;
+      }
+    }
+
+    &:active {
+      outline: none;
+
+      path {
+        stroke: rgba(255, 255, 255);
+      }
+
+      rect {
+        fill: rgba(255, 255, 255);
+      }
+    }
+  }
+}
+
+
